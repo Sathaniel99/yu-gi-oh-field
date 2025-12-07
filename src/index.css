@@ -1,0 +1,92 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --background: oklch(.1 0 0);
+  --foreground: oklch(.98 0 0);
+  --card: oklch(.14 0 0);
+  --card-foreground: oklch(.98 0 0);
+  --popover: oklch(.14 0 0);
+  --popover-foreground: oklch(.98 0 0);
+  --primary: oklch(.65 .15 85);
+  --primary-foreground: oklch(.1 0 0);
+  --secondary: oklch(.18 .02 280);
+  --secondary-foreground: oklch(.98 0 0);
+  --muted: oklch(.2 0 0);
+  --muted-foreground: oklch(.65 0 0);
+  --accent: oklch(.55 .2 270);
+  --accent-foreground: oklch(.98 0 0);
+  --destructive: oklch(.577 .245 27.325);
+  --destructive-foreground: oklch(.98 0 0);
+  --border: oklch(.22 0 0);
+  --input: oklch(.15 0 0);
+  --ring: oklch(.65 .15 85);
+  --chart-1: oklch(.646 .222 41.116);
+  --chart-2: oklch(.6 .118 184.704);
+  --chart-3: oklch(.398 .07 227.392);
+  --chart-4: oklch(.828 .189 84.429);
+  --chart-5: oklch(.769 .188 70.08);
+  --radius: .75rem;
+  --monster: oklch(.65 .15 85);
+  --spell: oklch(.6 .2 160);
+  --trap: oklch(.65 .25 350);
+  --extra: oklch(.55 .2 290);
+  --pendulum-red: oklch(.6 .25 25);
+  --pendulum-blue: oklch(.55 .2 250);
+  --link: oklch(.65 .15 195);
+  --graveyard: oklch(.5 0 0);
+}
+
+.bg-card {
+  background-color: var(--card);
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  font-size: 1em;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: var(--background);
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}

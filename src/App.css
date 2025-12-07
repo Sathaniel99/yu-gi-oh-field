@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@import "@fontsource/permanent-marker";
+@import "@fontsource/kalam";
+@import "@fontsource/poppins";
+@import "@fontsource/fredericka-the-great";
+@import "@fontsource/new-rocker";
+
+:root {
+    font-family: "Poppins";
+}
+
+.font-new-rocker {
+    font-family: "New Rocker";
+}
+
+.font-fredericka-the-great {
+    font-family: 'Fredericka the Great';
+}
+
+.font-permanent-marker {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.font-kalam {
+    font-family: 'Kalam';
+}
+.background-object{
+    position: relative;
+}
+
+.background-object::before {
+    background: url('/back.webp') center center / contain no-repeat;
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    filter:  brightness(1) blur(.5rem);
+    z-index: 0;
+    opacity: 0.1;
+}
+
+
+@keyframes clockwiseSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes counterclockwiseSpin {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.gear-clockwise {
+    animation: clockwiseSpin 3s linear infinite;
+}
+
+.gear-counterclockwise {
+    animation: counterclockwiseSpin 2s linear infinite;
+}
