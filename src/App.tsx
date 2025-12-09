@@ -16,19 +16,21 @@ function App() {
   return (
     <>
       <Navbar />
-      <section className='hidden md:grid grid-rows-[1fr_auto] h-screen'>
-        <div className='flex flex-col h-full lg:flex-row gap-8 p-6'>
+      <section className='grid grid-rows-[1fr_auto] min-h-screen'>
+        <div className='flex flex-col h-full md:flex-row gap-4 sm:gap-6 md:gap-8 p-3 sm:p-4 md:p-6 overflow-auto'>
           <VersionContext.Provider value={{ estadoVersion, setEstadoVersion }}>
-            <aside className='lg:w-100 space-y-6'>
+            <aside className='w-full md:w-80 lg:w-96 space-y-4 sm:space-y-6 shrink-0'>
               <Version />
               <Description />
             </aside>
-            <Tablero />
+            <div className='flex-1 min-w-0 overflow-hidden'>
+              <Tablero />
+            </div>
           </VersionContext.Provider>
         </div>
         <Footer />
       </section>
-      <Limit/>
+      <Limit />
     </>
   );
 }

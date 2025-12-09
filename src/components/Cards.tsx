@@ -148,13 +148,16 @@ export function Cards({ type }: CardsProps) {
         <>
             <Tooltip text={config.tooltip}>
                 <div
-                    className={`relative flex justify-center w-30 h-30 aspect-2/3 ${cursor} ${isGhost ? 'opacity-10' : ''}`}
+                    className={`relative flex justify-center 
+                        w-13 sm:w-16 md:w-14 lg:w-19 xl:w-25 2xl:w-30
+                        h-13 sm:h-16 md:h-14 lg:h-19 xl:h-25 2xl:h-30
+                        aspect-2/3 ${cursor} ${isGhost ? 'opacity-10' : ''}`}
                     title={config.tooltip}
                     aria-label={config.tooltip}
                 >
                     {/* Mostrar zona de defensa solo para tipos específicos */}
                     {config.showZone && (
-                        <div className="absolute h-full w-full hidden md:flex items-center justify-center z-3">
+                        <div className="absolute h-full w-full flex items-center justify-center z-3">
                             <div className={`h-[75%] w-full flex items-center justify-center text-center transition-all border-2 border-dashed border-white ${config.zoneClass || ''}`}></div>
                         </div>
                     )}
@@ -163,7 +166,7 @@ export function Cards({ type }: CardsProps) {
                     <div className={`relative h-full w-auto ${shadowClass} shadow-2xl transition-all rounded-lg overflow-hidden ${config.className}`}>
                         {/* Etiqueta de la zona */}
                         <div className="absolute w-full h-full flex justify-center items-center z-4">
-                            <h1 className={`font-bold font-permanent-marker not-italic text-shadow-neutral-950 text-shadow-md text-white text-center md:text-xs ${ isVoidZone ? 'rotate-270' : '' }`}>
+                            <h1 className={`font-bold font-permanent-marker not-italic text-shadow-neutral-950 text-shadow-md text-white text-center hidden xl:block text-sm ${ isVoidZone ? 'rotate-270' : '' }`}>
                                 {config.label}
                             </h1>
                         </div>
