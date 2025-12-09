@@ -3,7 +3,7 @@ import { FaRobot } from "react-icons/fa6";
 
 export function Limit() {
     return (
-        <section className="flex flex-col hidden h-screen justify-center items-center p-4">
+        <section className="flex flex-col md:hidden h-screen justify-center items-center p-4">
             <div className="flex mx-auto relative mt-auto rounded-full border-2 border-neutral-500 p-5 bg-neutral-50/5 shadow-lg">
                 <IoBuild
                     className="absolute bottom-0 text-red-600 animate-pulse"

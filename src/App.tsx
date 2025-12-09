@@ -30,7 +30,8 @@ function App() {
         </div>
         <Footer />
       </section>
-      <Limit />
+      {/* Este componente es para cuando se necesite bloquear una dimension especifica de pantalla */}
+      {/* <Limit /> */}
     </>
   );
 }
