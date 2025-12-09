@@ -3,7 +3,7 @@ import { Tablero } from './ui/Tablero';
 import { Description } from './ui/Descript';
 import { Navbar } from './ui/Navbar';
 import { Footer } from './ui/Footer';
-import { Limit } from './ui/Limit';
+// import { Limit } from './ui/Limit';
 import './App.css';
 import { useState } from 'react';
 import { VersionContext } from './hooks/contexts';
