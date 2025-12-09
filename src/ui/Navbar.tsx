@@ -1,5 +1,7 @@
 export function Navbar() {
+
     const TEXT_RIGHT = "Explora la evolución del campo de juego";
+    
     return (
         <header className="flex items-center justify-between sticky top-0 z-50 py-3 px-6 border-b-2 border-gray-500/50 bg-neutral-900/30 backdrop-blur-sm">
             <div className="flex flex-row gap-2">
