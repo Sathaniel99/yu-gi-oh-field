@@ -1,46 +1,23 @@
+// components
 import { Field } from "../../components/Field";
-import type { CardType } from "../../components/Cards";
+// config de fields
+import { classic_neutral_field, speed_monster_field, speed_duel_support_field } from "./config";
+import type { fieldProps } from "./config";
 
-const support_field: CardType[] = [
-    "extra deck",
-    "ghost",
-    "magic/trap",
-    "magic/trap",
-    "magic/trap",
-    "speed zone",
-    "deck",
-]
-const monster_field: CardType[] = [
-    "field zone",
-    "ghost",
-    "monster",
-    "monster",
-    "monster",
-    "ghost",
-    "graveyard",
-]
-const neutral_field: CardType[] = [
-    "void zone",
-    "null",
-    "null",
-    "null",
-    "null",
-    "null",
-    "void zone",
+const field: fieldProps[] = [
+    { field: speed_duel_support_field, side: 'oponent' as const },
+    { field: speed_monster_field, side: 'oponent' as const },
+    { field: classic_neutral_field, side: 'neutral' as const },
+    { field: speed_monster_field, side: 'player' as const },
+    { field: speed_duel_support_field, side: 'player' as const },
 ]
 
 export function Speed_Duel() {
     return (
         <div className="border-2 border-neutral-50/5 rounded-2xl p-3 background-object">
-            <div className="flex flex-col gap-3">
-                <Field field={support_field} side={'oponent'} />
-                <Field field={monster_field} side={'oponent'} />
-            </div>
-            <Field field={neutral_field} side="neutral" />
-            <div className="flex flex-col gap-3">
-                <Field field={monster_field} side={'player'} />
-                <Field field={support_field} side={'player'} />
-            </div>
+            {field.map((config, index) => (
+                <Field key={index} field={config.field} side={config.side} />
+            ))}
         </div>
     );
 }

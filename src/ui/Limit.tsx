@@ -1,3 +1,4 @@
+// components: icons
 import { IoBuild } from "react-icons/io5";
 import { FaRobot } from "react-icons/fa6";
 

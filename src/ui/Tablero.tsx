@@ -1,5 +1,7 @@
-import { VersionContext } from "../hooks/contexts";
+// hooks
 import { useContext } from "react";
+import { VersionContext } from "../hooks/contexts";
+// components: tableros
 import { Classic_Version } from "./tableros/CV";
 import { Extra_Monster_Zone } from "./tableros/EMZ";
 import { Pendulum_Zone } from "./tableros/PZ";
@@ -18,10 +20,10 @@ export function Tablero() {
     };
 
     return (
-        <>
+        <div className='flex-1 min-w-0 overflow-hidden'>
             <div className="w-full h-full flex flex-col items-center justify-center gap-4 border-2 border-gray-500/50 bg-card rounded-xl p-6 border-border">
                 {tableros[estadoVersion as keyof typeof tableros] || tableros.DF}
             </div>
-        </>
+        </div>
     )
 }

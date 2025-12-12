@@ -1,3 +1,4 @@
+// components
 import { Tooltip } from "../components/Tooltip"
 
 type LinkConfig = {

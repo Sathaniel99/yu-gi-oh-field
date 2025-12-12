@@ -1,0 +1,13 @@
+export const DECK = "deck";
+export const NULL = "null";
+export const GHOST = 'ghost';
+export const MONSTER = 'monster';
+export const GRAVEYARD = "graveyard";
+export const VOID_ZONE = "void zone";
+export const FIELD_ZONE = "field zone";
+export const EXTRA_DECK = "extra deck";
+export const MAGIC_TRAP = "magic/trap";
+export const SPEED_ZONE = 'speed zone';
+export const PENDULUM_LEFT = "pendulum-left";
+export const PENDULUM_RIGHT = "pendulum-right";
+export const EXTRA_MONSTER_ZONE = 'extra monster zone';
